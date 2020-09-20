@@ -1,0 +1,80 @@
+<!DOCTYPE html>  
+<html>  
+    <head>  
+        <meta charset="utf-8">  
+        <title> Form Example </title>  
+    </head>  
+    <body>  
+        <form action="" method="post">
+
+            <p>Name:</p>
+            <input id="name" type="text" name="name" placeholder="輸入 name">
+        
+            <p>Email:</p>
+            <input id="email" type="text" name="email" placeholder="輸入 email">
+            
+            <p>Gender:</p>
+            <input id="gender" type="text" name="gender" placeholder="輸入 gender">
+            
+            <p>Age:</p>
+            <input id="age" type="text" name="age" placeholder="輸入 age">
+            <button id="submit-btn"> Submit </button>
+        </form> 
+    </body>  
+    <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vconsole@3.2.0/dist/vconsole.min.js"></script>
+    <script>
+        async function initializeLiff(myLiffId) {
+                console.log(myLiffId);
+                try{
+                    return liff.init({liffId: myLiffId});
+                }
+                catch(err){
+                    console.log(err);
+                }
+        }
+        ~async function(){
+            var vConsole = new VConsole();
+            let tmp = await initializeLiff('1654947700-lGNQ8emK');
+            console.log("salkdjf");
+
+            document.getElementById('submit-btn').addEventListener('click', async function (e) {
+                e.preventDefault();
+                let name = document.getElementById('name').value;
+                let email = document.getElementById('email').value;
+                let age = document.getElementById('age').value;
+                let gender = document.getElementById('gender').value;
+                let baseURL = `https://ab6125372073.ngrok.io/receiveMessege`;
+                console.log("here3");
+                var profile;
+                try{
+                    profile = await liff.getProfile();
+                    console.log(profile);     
+                }
+                catch(err){
+                    console.log("err = ", err);
+                }
+                console.log("lsdkjfslkdjf");
+                let data = {
+                    "name": name,
+                    "email": email,
+                    "age": age,
+                    "gender": gender,
+                    "userId": profile.userId
+                }
+                console.log(data);
+                try{
+                    let res = await fetch(baseURL, {
+                    method:'POST',
+                    body:  JSON.stringify(data),
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                    })
+                }
+                catch(err){
+                    console.log(err);
+                }
+        });}()
+    </script>
+</html> 
