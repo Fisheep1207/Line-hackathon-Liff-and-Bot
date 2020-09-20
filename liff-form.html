@@ -36,8 +36,6 @@
         ~async function(){
             var vConsole = new VConsole();
             let tmp = await initializeLiff('1654947700-lGNQ8emK');
-            console.log("salkdjf");
-
             document.getElementById('submit-btn').addEventListener('click', async function (e) {
                 e.preventDefault();
                 let name = document.getElementById('name').value;
@@ -45,7 +43,6 @@
                 let age = document.getElementById('age').value;
                 let gender = document.getElementById('gender').value;
                 let baseURL = `https://ab6125372073.ngrok.io/receiveMessege`;
-                console.log("here3");
                 var profile;
                 try{
                     profile = await liff.getProfile();
@@ -54,7 +51,6 @@
                 catch(err){
                     console.log("err = ", err);
                 }
-                console.log("lsdkjfslkdjf");
                 let data = {
                     "name": name,
                     "email": email,
