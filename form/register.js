@@ -1,9 +1,10 @@
 const form = document.getElementById('theform')
+var vConsole = new VConsole();
 form.addEventListener('submit', async (e) => {
     console.log("Hello");
-    // e.preventDefault();
+    e.preventDefault();
     let form_data = new FormData(form);
-    let baseURL = `http://127.0.0.1:30000/p`;
+    let baseURL = `https://49c73fd73149.ngrok.io/receiveMessege`;
     form_data.append("userId", "Fuckabro");
     var object = {};
     form_data.forEach(function(value, key){
@@ -21,20 +22,26 @@ form.addEventListener('submit', async (e) => {
     console.log(object);
     let json_data = JSON.stringify(object);
     console.log(json_data);
-    // try{
-    //     let res = await fetch(baseURL, {
-    //     method:'POST',
-    //     body:  json_data,
-    //     headers: {
-    //         'Content-Type': 'application/json'
-            
-    //     }
-    //     })
-    //     console.log(res);
-    // }
-    // catch(err){
-    //     console.log(err);
-    // }
+    try{
+        let res = await fetch(baseURL, {
+        method:'POST',
+        body:  json_data,
+        headers: {
+            'Content-Type': 'application/json'            
+        }
+        })
+        if (res.status == 200){
+            console.log(res);
+            // redirect to somewhere
+        }
+        else{
+            console.log("Bad!");
+            // redirect to somewhere
+        }
+    }
+    catch(err){
+        console.log(err);
+    }
 });
 
 // ~async function(e){
