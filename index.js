@@ -10,7 +10,7 @@ const baseURL = "127.0.0.1"
 // app.use(bodyParser.urlencoded({ extended: false }));
 // app.use(bodyParser.json());
 const port = process.env.PORT || 3000
-
+app.use(express.static("./form"));
 app.post('/', line.middleware(config), (req, res) => {
   Promise
     .all(req.body.events.map(handleEvent))
@@ -26,7 +26,7 @@ app.get('/form', (req, res) => {
       'x-sent': true
     }
   }
-  res.sendFile('./liff-form.html', options);
+  res.sendFile('./form/register.html', options);
 })
 
 app.post('/receiveMessege', bodyParser.urlencoded({ extended: false }), bodyParser.json(), (req, res) => {

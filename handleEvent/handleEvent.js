@@ -1,6 +1,6 @@
 import client from "../client.js"
 import querystring from "querystring"
-import {flex1, flex2, flex3, flex4, join_flex} from "./message_template/flex.js"
+import {flex1, flex2, flex3, data_to_image_flex, join_flex} from "./message_template/flex.js"
 export function handleEvent(event) {
     //console.log(event);
     if (event.type === 'join'){
@@ -19,7 +19,7 @@ export function handleEvent(event) {
           client.replyMessage(event.replyToken, flex3)
           break;
         case '4':
-          client.replyMessage(event.replyToken, flex4)
+          client.replyMessage(event.replyToken, data_to_image_flex)
           break;
         case '5':
           client.replyMessage(event.replyToken, {

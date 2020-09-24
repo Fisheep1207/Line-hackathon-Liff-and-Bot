@@ -1,30 +1,3 @@
-export const join_flex = {
-  "type": "flex",
-  "altText": "Join Msg",
-  "contents": {
-    "type": "bubble",
-    "body": {
-      "type": "box",
-      "layout": "horizontal",
-      "contents": [
-        {
-          "type": "text",
-          "text": "Hello,"
-        },
-        {
-          "type": "button",
-          "style": "link",
-          "height": "sm",
-          "action": {
-            "type": "uri",
-            "label": "WEBSITE",
-            "uri": "https://liff.line.me/1654947700-lGNQ8emK"
-          }
-        }
-      ]
-    }
-  }
-}
 export const flex1 = {
     "type": "flex",
     "altText": "This is a Flex Message",
@@ -470,120 +443,204 @@ export const flex3 = {
     }
   }
 
-export const flex4 = {
+export const data_to_image_flex = {
     "type": "flex",
     "altText": "This is a Flex Message",
     "contents": {
       "type": "bubble",
       "hero": {
         "type": "image",
-        "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_2_restaurant.png",
+        "url": "https://i.ibb.co/Kr3k43P/2020-09-22-12-38-44.png",
         "size": "full",
         "aspectRatio": "20:13",
         "aspectMode": "cover",
         "action": {
           "type": "uri",
-          "uri": "https://linecorp.com"
+          "uri": "http://linecorp.com/"
         }
       },
       "body": {
         "type": "box",
         "layout": "vertical",
-        "spacing": "md",
-        "action": {
-          "type": "uri",
-          "uri": "https://linecorp.com"
-        },
         "contents": [
           {
             "type": "text",
-            "text": "Brown's Burger",
-            "size": "xl",
-            "weight": "bold"
+            "weight": "bold",
+            "size": "lg",
+            "text": "用圖表快速瀏覽身體狀況！"
           },
           {
             "type": "box",
             "layout": "vertical",
+            "margin": "lg",
             "spacing": "sm",
             "contents": [
               {
                 "type": "box",
                 "layout": "baseline",
+                "spacing": "sm",
                 "contents": [
                   {
-                    "type": "icon",
-                    "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/restaurant_regular_32.png"
-                  },
-                  {
                     "type": "text",
-                    "text": "$10.5",
-                    "weight": "bold",
-                    "margin": "sm",
-                    "flex": 0
-                  },
-                  {
-                    "type": "text",
-                    "text": "400kcl",
+                    "wrap": true,
+                    "color": "#666666",
                     "size": "sm",
-                    "align": "end",
-                    "color": "#aaaaaa"
-                  }
-                ]
-              },
-              {
-                "type": "box",
-                "layout": "baseline",
-                "contents": [
-                  {
-                    "type": "icon",
-                    "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/restaurant_large_32.png"
-                  },
-                  {
-                    "type": "text",
-                    "text": "$15.5",
-                    "weight": "bold",
-                    "margin": "sm",
-                    "flex": 0
-                  },
-                  {
-                    "type": "text",
-                    "text": "550kcl",
-                    "size": "sm",
-                    "align": "end",
-                    "color": "#aaaaaa"
+                    "flex": 5,
+                    "text": "我今天想要了解的資料項目是..."
                   }
                 ]
               }
             ]
-          },
-          {
-            "type": "text",
-            "text": "Sauce, Onions, Pickles, Lettuce & Cheese",
-            "wrap": true,
-            "color": "#aaaaaa",
-            "size": "xxs"
           }
         ]
       },
       "footer": {
         "type": "box",
         "layout": "vertical",
+        "spacing": "sm",
         "contents": [
           {
-            "type": "spacer",
-            "size": "xxl"
+            "type": "button",
+            "style": "link",
+            "height": "sm",
+            "action": {
+              "type": "uri",
+              "label": "收縮壓",
+              "uri": "https://linecorp.com"
+            },
+            "position": "relative"
           },
           {
             "type": "button",
-            "style": "primary",
-            "color": "#905c44",
+            "style": "link",
+            "height": "sm",
             "action": {
               "type": "uri",
-              "label": "Add to Cart",
+              "label": "舒張壓",
               "uri": "https://linecorp.com"
             }
+          },
+          {
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "label": "血糖",
+              "uri": "http://linecorp.com/"
+            }
+          },
+          {
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "label": "步數",
+              "uri": "http://linecorp.com/"
+            }
+          },
+          {
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "label": "睡眠時間",
+              "uri": "http://linecorp.com/"
+            }
           }
-        ]
+        ],
+        "flex": 0
+      },
+      "styles": {
+        "footer": {
+          "separator": true
+        }
       }
     }
   }
+
+ export const join_flex = {
+    "type": "flex",
+    "altText": "This is a Flex Message",
+    "contents": {
+      "type": "bubble",
+      "hero": {
+        "type": "image",
+        "url": "https://i.ibb.co/2dVWCd6/11.png",
+        "size": "full",
+        "aspectRatio": "20:13",
+        "aspectMode": "cover",
+        "action": {
+          "type": "uri",
+          "uri": "http://linecorp.com/"
+        }
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "一起打造你的健康生活！",
+            "weight": "bold",
+            "size": "xl"
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "margin": "lg",
+            "spacing": "sm",
+            "contents": [
+              {
+                "type": "text",
+                "text": "歡迎使用Line Health++小精靈！",
+                "color": "#aaaaaa",
+                "size": "sm"
+              },
+              {
+                "type": "text",
+                "text": "為了讓小精靈更了解你的身體狀況，我們",
+                "size": "sm",
+                "color": "#aaaaaa"
+              },
+              {
+                "type": "text",
+                "text": "必須取得你的基本健康狀況及資料，日後",
+                "size": "sm",
+                "color": "#aaaaaa"
+              },
+              {
+                "type": "text",
+                "text": "可以做更精確的診斷喔！",
+                "size": "sm",
+                "color": "#aaaaaa"
+              }
+            ]
+          }
+      ]
+    },
+    "footer": {
+      "type": "box",
+      "layout": "vertical",
+      "spacing": "sm",
+      "contents": [
+        {
+          "type": "button",
+          "style": "link",
+          "height": "sm",
+          "action": {
+            "type": "uri",
+            "label": "開始填寫資料",
+            "uri": "https://liff.line.me/1654947700-lGNQ8emK"
+          }
+        },
+        {
+          "type": "spacer",
+          "size": "sm"
+        }
+      ],
+      "flex": 0
+    },
+    "styles": {
+      "footer": {
+        "separator": true
+      }
+    }
+  }
+} 

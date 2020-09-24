@@ -1,0 +1,406 @@
+
+<!DOCTYPE html>
+<meta charset="utf-8"> 
+<html>
+<head>
+<link rel="stylesheet" href="./register.css">
+</head>
+<body>
+<form id="theform" method="post">
+  <fieldset>
+    <legend>  Personal Infomation  </legend>
+    <p>
+      <label for="username">姓名 : <abbr title="required" aria-label="required">*</abbr></label>
+      <input id="username" type="text" name="username">
+      <label for="username"></label>
+    </p>
+    <p>
+      <label for="gender">
+        <span>生理性別 : <abbr title="required" aria-label="required">*</abbr></span>
+      </label>
+      <select id="gender" name="usergender">
+        <option value="female">女性</option>
+        <option value="male">男性</option>
+      </select>
+    </p>
+    <p>
+      <label for="birthdate">
+        <span>出生年月日 :</span>
+        <em>(格式請照 yyyy/mm/dd)</em>
+        <strong><abbr title="required">*</abbr></strong>
+        <input id="birthdate" type="text" name="birthdate">
+      </label>
+    </p>
+    <p>
+      <label for="userphone">
+        <span>手機號碼 :</span>
+        <strong><abbr title="required">*</abbr></strong>
+        <input id="userphone" type="text" name="userphone">
+      </label>
+    </p>
+    <p>
+      <label for="docid">個管師 ID : </label>
+        <input id="docid" type="text" name="docid">
+      <label for="docid"></label>
+    </p>
+    <p>
+      <label for="emergencyphone">
+        <span>緊急聯絡人號碼 :</span>
+        <strong><abbr title="required">*</abbr></strong>
+        <input id="emergencyphone" type="text" name="emergencyphone">
+      </label>
+    </p>
+    <p>
+      <label for="emergencyman">
+        <span>緊急聯絡人關係 :</span>
+        <strong><abbr title="required">*</abbr></strong>
+        <select id="emergencyman" name="emergencyman">
+          <option value="parent">父母</option>
+          <option value="children">子女</option>
+          <option value="mate">配偶</option>
+          <option value="aunt">阿姨/舅舅/姑姑/叔叔</option>
+          <option value="grandpa">祖父母</option>
+          <option value="grandson">孫子女</option>
+        </select>
+      </label>
+    </p>
+    <p>
+      <label for="adress">居住地地址 : </label>
+      <input id="adress" type="text" name="adress">
+      <label for="adress"></label>
+    </p>
+
+    <span><h2>健康管理資訊</h2></span>
+      <p>
+        <label for="turnfreq">
+          <span><h4>回診頻率*</h4></span>
+
+        </label>  
+      </p>
+      <span>每</span>
+        <li> 
+          <select id="freq" name="usergender">
+            <option value="one">一</option>
+            <option value="two">兩</option>
+            <option value="three">三</option>
+            <option value="four">四</option>
+            <option value="five">五</option>
+            <option value="six">六</option>
+            <option value="seven">七</option>
+            <option value="eight">八</option>
+            <option value="nine">九</option>
+            <option value="ten">十</option>
+            <option value="eleven">十一</option>
+
+          </select>
+        </li>
+        <li> 
+          <select id="yearfreq" name="usergender">
+            <option value="year">年</option>
+            <option value="month">個月</option>
+            <option value="week">個禮拜</option>
+            <option value="day">天</option>
+            
+          </select>
+        </li>
+        <span>回診一次</span>
+      </p>
+    <h4>健康資訊調查*</h4>
+      <ul>
+      <p>
+      <h0>內分泌與代謝疾病 :</h0>
+      <ul>
+        <li> 
+          <label for="title_3"> 
+            <input type="checkbox" value="metabolismnotsick" name="title" >
+            無
+          </label> 
+        </li>
+        <li> 
+          <label for="title_3"> 
+            <input type="checkbox" value="sugarpee" name="title" >
+            糖尿病
+          </label> 
+        </li>
+        <li> 
+          <label for="title_3"> 
+            <input type="checkbox" value="gayline" name="title" >
+            甲狀腺機能障礙
+          </label> 
+        </li>
+        <li> 
+          <label for="title_3"> 
+            <input type="checkbox" value="highbloodfat" name="title" >
+            高血脂
+          </label> 
+        </li>
+      </ul>
+      </p>
+      <p>
+      <h0>神經系統疾病 :</h0>
+      <ul>
+        <li>
+          <label for="title_3"> 
+            <input type="checkbox" value="nervenotsick" name="title" >
+            無
+          </label> 
+        </li>
+        <li> 
+          <label for="title_3"> 
+            <input type="checkbox" value="packinson" name="title" >
+            帕金森氏症
+          </label> 
+        </li>
+        <li> 
+          <label for="title_3"> 
+            <input type="checkbox" value="forget" name="title" >
+            失智症
+          </label> 
+        </li>
+      </ul>
+      </p>
+      <p>
+      <h0>循環系統疾病 :</h0>
+      <ul>
+        <li> 
+          <label for="title_3"> 
+            <input type="checkbox" value="circlenotsick" name="title" >
+            無
+          </label> 
+        </li>
+        <li> 
+          <label for="title_3"> 
+            <input type="checkbox" value="heartattack" name="title" >
+            心臟病
+          </label> 
+        </li>
+        <li> 
+          <label for="title_3"> 
+            <input type="checkbox" value="highbloodpressure" name="title" >
+            高血壓
+          </label> 
+        </li>
+        <li> 
+          <label for="title_3"> 
+            <input type="checkbox" value="middlewind" name="title" >
+            中風
+          </label> 
+        </li>
+        <li> 
+          <label for="title_3"> 
+            <input type="checkbox" value="bloodstuck" name="title" >
+            血栓症
+          </label> 
+        </li>
+      </ul>
+      </p>
+            <p>
+      <span><h>惡性腫瘤 : </h4></span>
+        <ul>
+          <li>
+          <label for="title_1">
+            <input type="checkbox" value="tumornotsick" name="title" value="K" >
+            無
+          </label>
+        </li>
+        <li>
+          <label for="title_2">
+            <input type="checkbox" value="lungcancer" name="title" value="Q">
+            肺癌
+          </label>
+        </li>
+        <li> 
+          <label for="title_3"> 
+            <input type="checkbox" value="livercancer" name="title" >
+            肝癌
+          </label> 
+        </li>
+        <li> 
+          <label for="title_3"> 
+            <input type="checkbox" value="stomachcancer" name="title" >
+            胃癌
+          </label> 
+        </li>
+        <li> 
+          <label for="title_3"> 
+            <input type="checkbox" value="largeintestinecancer" name="title" >
+            大腸癌
+          </label> 
+        </li>
+        <li> 
+          <label for="title_3"> 
+            <input type="checkbox" value="mouthcancer" name="title" >
+            口腔癌
+          </label> 
+        </li>
+      </ul>
+      </p>
+
+      <p>
+      <h0>呼吸系統疾病 :</h0>
+      <ul>
+        <li> 
+          <label for="title_3"> 
+            <input type="checkbox" value="breathnotsick" name="title" >
+            無
+          </label> 
+        </li>
+        <li> 
+          <label for="title_3"> 
+            <input type="checkbox" value="nose" name="title" >
+            慢性鼻竇炎
+          </label> 
+        </li>
+        <li> 
+          <label for="title_3"> 
+            <input type="checkbox" value="airpipe" name="title" >
+            慢性支氣管炎
+          </label> 
+        </li>
+        <li> 
+          <label for="title_3"> 
+            <input type="checkbox" value="stucklungfever" name="title" >
+            慢性阻塞性肺炎(COPD)
+          </label> 
+        </li>
+      </ul>
+      </p>
+      <p>
+        <h0>泌尿系統疾病 :</h0>
+        <ul>
+        <li> 
+          <label for="title_3"> 
+            <input type="checkbox" value="peenotsick" name="title" >
+            無
+          </label> 
+        </li>
+        <li> 
+          <label for="title_3"> 
+            <input type="checkbox" value="kidnycancer" name="title" >
+            慢性腎臟炎
+          </label> 
+        </li>
+        <li> 
+          <label for="title_3"> 
+            <input type="checkbox" value="kidnyinfect" name="title" >
+            腎臟感染
+          </label> 
+        </li>
+      </ul>
+      </p>
+      <p>
+        <h0>骨骼肌肉及結締組織疾病 :</h0>
+        <ul>
+        <li> 
+          <label for="title_3"> 
+            <input type="checkbox" value="bonenotsick" name="title" >
+            無
+          </label> 
+        </li>
+        <li> 
+          <label for="title_3"> 
+            <input type="checkbox" value="joints" name="title" >
+            關節炎
+          </label> 
+        </li>
+        <li> 
+          <label for="title_3"> 
+            <input type="checkbox" value="muscle" name="title" >
+            多發性肌炎
+          </label> 
+        </li>
+        <li> 
+          <label for="title_3"> 
+            <input type="checkbox" value="boneloss" name="title" >
+            骨質疏鬆症
+          </label> 
+        </li>
+        <li> 
+          <label for="title_3"> 
+            <input type="checkbox" value="redpoint" name="title" >
+            紅斑性狼瘡
+          </label> 
+        </li>
+      </ul>
+      </p>
+      <p>
+        <h0>皮膚及皮下組織疾病 :</h0>
+        <ul>
+        <li> 
+          <label for="title_3"> 
+            <input type="checkbox" value="skinnotsick" name="title" >
+            無
+          </label> 
+        </li>
+        <li> 
+          <label for="title_3"> 
+            <input type="checkbox" value="hives" name="title" >
+            慢性蕁麻疹
+          </label> 
+        </li>
+        <li> 
+          <label for="title_3"> 
+            <input type="checkbox" value="misplaceskin" name="title" >
+            異位性皮膚炎
+          </label> 
+        </li>
+        <li> 
+          <label for="title_3"> 
+            <input type="checkbox" value="psoriasis" name="title" >
+            乾癬
+          </label> 
+        </li>
+        <li> 
+          <label for="title_3"> 
+            <input type="checkbox" value="bodypsoriasis" name="title" >
+            全身性濕疹
+          </label> 
+        </li>
+      </ul>
+      </p>
+        <h0>血液及造血器官疾病 :</h0>
+        <ul>
+        <li> 
+          <label for="title_3"> 
+            <input type="checkbox" value="bloodnotsick" name="title" >
+            無
+          </label> 
+        </li>
+        <li> 
+          <label for="title_3"> 
+            <input type="checkbox" value="anemia" name="title" >
+            慢性貧血
+          </label> 
+        </li>
+        <li> 
+          <label for="title_3"> 
+            <input type="checkbox" value="purplepoint" name="title" >
+            紫斑症
+          </label> 
+        </li>
+        <li> 
+          <label for="title_3"> 
+            <input type="checkbox" value="bloodfriend" name="title" >
+            血友病
+          </label> 
+        </li>
+      </ul>
+      </ul>
+    <p>
+      <cute><button id="submit-btn" type="submit" class = "block">送出資訊</button></cute>
+    </p>
+
+  </fieldset>
+</form>
+</body>
+<script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vconsole@3.2.0/dist/vconsole.min.js"></script>
+<script src="./register.js"></script>
+</html>
+
+
+
+
+
+
+
