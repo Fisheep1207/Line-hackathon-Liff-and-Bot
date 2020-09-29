@@ -28,10 +28,10 @@ curl -v -X POST https://api.line.me/v2/bot/richmenu \
 }'
 
 # 1-2
-curl -v -X POST https://api-data.line.me/v2/bot/richmenu/richmenu-c384a5f0eb246353dfd500515f576cb3/content \
+curl -v -X POST https://api-data.line.me/v2/bot/richmenu/richmenu-e800b2b66ba98c03c1c1123561a66b0b/content \
 -H "Authorization: Bearer hdDeS/aOHiZgkqv1+qamPrTFtxCcxpaBVBt/IOvMBiGOW741fh8hrZZiLsF+A8zs1utm5DjOMB2e+RcUUysT41IeqJsu9C8aVUNgU374R8iR899cV3VjKNDvXdnCDRF3jRjnoNKISk4qyE+N7JxMiwdB04t89/1O/w1cDnyilFU=" \
 -H "Content-Type: image/jpeg" \
--T ~/Desktop/official-line-bot/rich-menu.png
+-T ~/Desktop/official-line-bot/richmenu_img/rich-menu-final.png
 
 # 1-3
 curl -v -X POST https://api.line.me/v2/bot/user/all/richmenu/richmenu-c384a5f0eb246353dfd500515f576cb3 \

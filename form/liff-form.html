@@ -42,11 +42,12 @@
                 let email = document.getElementById('email').value;
                 let age = document.getElementById('age').value;
                 let gender = document.getElementById('gender').value;
-                let baseURL = `https://ab6125372073.ngrok.io/receiveMessege`;
+                let baseURL = `https://eb9f9ce63cad.ngrok.io/receiveMessege`;
                 var profile;
                 try{
                     profile = await liff.getProfile();
-                    console.log(profile);     
+                    console.log(profile);
+                    console.log(profile.userId);
                 }
                 catch(err){
                     console.log("err = ", err);

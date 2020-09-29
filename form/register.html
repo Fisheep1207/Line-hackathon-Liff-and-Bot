@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="./register.css">
 </head>
 <body>
-<form id="theform" action="http://127.0.0.1:30000/receiveMessege" method="post">
+<form id="theform" method="post" target = "_parent">
   <fieldset>
     <legend>  Personal Infomation  </legend>
     <p>
@@ -79,7 +79,7 @@
       </p>
       <span>每</span>
         <li> 
-          <select id="freq" name="usergender">
+          <select id="freq" name="turnfreq">
             <option value="one">一</option>
             <option value="two">兩</option>
             <option value="three">三</option>
@@ -95,7 +95,7 @@
           </select>
         </li>
         <li> 
-          <select id="yearfreq" name="usergender">
+          <select id="yearfreq" name="turnfreq">
             <option value="year">年</option>
             <option value="month">個月</option>
             <option value="week">個禮拜</option>
@@ -118,7 +118,7 @@
         </li>
         <li> 
           <label for="metabolism"> 
-            <input type="checkbox" value="sugarpee" name="metabolism" >
+            <input type="checkbox" value="diabetes" name="metabolism" >
             糖尿病
           </label> 
         </li>
@@ -195,7 +195,7 @@
       </ul>
       </p>
             <p>
-      <span><h>惡性腫瘤 : </h4></span>
+      <span><h>癌症 : </h4></span>
         <ul>
           <li>
           <label for="tumor">

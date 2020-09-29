@@ -2,7 +2,7 @@ import client from "../client.js"
 import querystring from "querystring"
 import {flex1, flex2, flex3, data_to_image_flex, join_flex} from "./message_template/flex.js"
 export function handleEvent(event) {
-    //console.log(event);
+    console.log(event);
     if (event.type === 'join'){
       client.replyMessage(event.replyToken, join_flex)
     }
@@ -41,11 +41,7 @@ export function handleEvent(event) {
       // ignore non-text-message event
       return Promise.resolve(null);
     }
-    if (event.message.text === 'test2') {
-        return client.replyMessage(event.replyToken, [
-            flex1,
-            flex2,
-            flex3
-      ]);
+    if (event.message.text === 'testForm') {
+        return client.replyMessage(event.replyToken, join_flex);
     }
   }
